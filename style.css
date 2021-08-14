@@ -28,19 +28,43 @@ h1, h2, h3 {
 
 .container {
     margin: 0 auto;
+    padding: 20px;
     max-width: 100%;
     width: 1200px;
 }
 
 .flex {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.flex > * {
+.flex > div {
     flex: 1;
+}
+
+nav {
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-grayish-violet);
+}
+
+nav li {
+    margin-left: 30px;
 }
 
 /* Button for nav, header and section 2 */
 .btn {
-
+    border: 2px solid var(--very-dark-violet);
+    padding: 10px 25px;
+    background: transparent;
 }
