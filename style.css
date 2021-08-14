@@ -171,8 +171,11 @@ header p {
     letter-spacing: 0.1rem;
     line-height: 2;
     font-weight: 400;
+    opacity: 0.8;
 }
 
 header button {
     margin-top: 25px;
 }
+
+/* Sectio Styling */
