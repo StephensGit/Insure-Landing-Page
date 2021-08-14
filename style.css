@@ -15,15 +15,72 @@
     --heading-font: 'DM Serif Display', 'serif';
 }
 
+/* Universal Styling */
 body {
     font-family: var(--body-font);
     font-weight: 400;
-    font-size: 11px;
+    font-size: 12px;
+}
+
+/* Button for nav, header and section 2 */
+.btn {
+    padding: 7px 25px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-reverse {
+    border-color: var(--very-dark-violet);
+    color: var(--dark-violet);
 }
 
 h1, h2, h3 {
     font-family: var(--heading-font);
-    /* font-weight: 400; */
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-size: 6em;
+    line-height: 1;
+    width: 90%;
+    position: relative;
+    padding-top: 80px;
+}
+
+h2 {
+    margin-bottom: 80px;
+}
+h3 {
+    font-size: 2em;
+}
+
+p {
+    color: var(--very-light-gray);
+    /* opacity: 0.8; */
+}
+
+.border-top-white::before {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 1px;
+}
+
+.border-top-violet::before {
+    content: '';;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-violet);
+    width: 150px;
+    height: 1px;
 }
 
 .container {
@@ -43,10 +100,16 @@ h1, h2, h3 {
     flex: 1;
 }
 
-nav {
-
+.align-start {
+    /* Positions the left column with the image at the top */
+    align-items: flex-start;
 }
 
+/* Nav Styling */
+nav {
+    z-index: 2;
+    background: #ffffff;
+}
 nav ul {
     display: flex;
     list-style-type: none;
@@ -62,9 +125,54 @@ nav li {
     margin-left: 30px;
 }
 
-/* Button for nav, header and section 2 */
-.btn {
-    border: 2px solid var(--very-dark-violet);
-    padding: 10px 25px;
-    background: transparent;
+/* Header Styling */
+header {
+    padding: 75px 0;
+    margin-bottom: 250px;
+    background: var(--dark-violet);
+    color: #ffffff;
+    position: relative;
+    z-index: -1;
+}
+
+header::before {
+    content: '';
+    background-image: url('./images/bg-pattern-intro-left-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    bottom: -57%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header::after {
+    content: '';
+    background-image: url('./images/bg-pattern-intro-right-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.img-intro {
+    margin-bottom: -250px;
+}
+
+header p {
+    color: var(--very-light-gray);
+    width: 100%;
+    padding-right: 35px;
+    letter-spacing: 0.1rem;
+    line-height: 2;
+    font-weight: 400;
+}
+
+header button {
+    margin-top: 25px;
 }
