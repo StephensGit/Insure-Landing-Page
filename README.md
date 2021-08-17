@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Insure landing page](https://user-images.githubusercontent.com/45046901/129781550-a47fb978-ff59-4386-b125-ccbe88ba27b1.png)
 
 ### Links
 
