@@ -99,6 +99,11 @@ h3 {
   align-items: flex-start;
 }
 
+nav .hamburger-icon,
+.img-nav-mobile {
+  display: none;
+}
+
 ul,
 li,
 a {
@@ -108,8 +113,14 @@ a {
 
 /* Nav Styling */
 nav {
-  z-index: 2;
+  /* z-index: 100; */
   background: #ffffff;
+  /* background-color: #fff; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 99;
 }
 nav ul {
   display: flex;
@@ -124,6 +135,10 @@ nav ul li a {
 
 nav li {
   margin-left: 30px;
+}
+
+.close-icon {
+  display: none;
 }
 
 /* Header Styling */
@@ -353,8 +368,78 @@ footer ul a {
     margin: 0;
     padding: 0;
   }
+
   .flex {
     flex-direction: column;
+  }
+
+  nav .flex {
+    flex-direction: row;
+  }
+
+  nav {
+    padding: 15px;
+  }
+
+  .hamburger-btn {
+    border: 0;
+  }
+
+  nav .hamburger-icon {
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav .hamburger-btn .close {
+    display: none;
+  }
+
+  nav .hamburger-btn.show .open {
+    display: none;
+  }
+
+  nav .hamburger-btn.show .close {
+    display: block;
+  }
+
+  nav ul.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 0;
+    height: calc(100vh - 62px);
+    width: 100vw;
+    top: 62px;
+    left: 0;
+    background-color: var(--very-dark-violet);
+  }
+
+  nav ul li:first-child {
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    color: #ffffff;
+    margin: 30px 0;
+  }
+
+  .img-nav-mobile {
+    /* display: block; */
+    /* z-index: 101; */
+  }
+
+  .img-wrapper {
+    text-align: left;
+    z-index: 100;
   }
 
   .btn {
@@ -362,6 +447,12 @@ footer ul a {
     padding: 10px 25px;
     margin-bottom: 90px;
     letter-spacing: 0.2em;
+  }
+
+  .btn-reverse {
+    border-color: #ffffff;
+    color: #ffffff;
+    margin-top: 0;
   }
 
   .reverse-mobile {
@@ -513,10 +604,3 @@ footer ul a {
     padding-top: 30px;
   }
 }
-
-/* @media only screen and (max-width: 420px) {
-  body {
-    background-color: green;
-    padding: 20px;
-  }
-} */
