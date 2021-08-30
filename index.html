@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script src="./script.js" defer></script>
 
     <title>Frontend Mentor | Insure landing page</title>
 
@@ -21,16 +22,34 @@
     <nav>
       <div class="container">
         <div class="flex">
-          <div>
+          <div class="img-wrapper">
             <img src="./images/logo.svg" alt="logo" />
           </div>
 
-          <ul>
+          <button id="hamburger-btn" class="hamburger-btn">
+            <img
+              class="open hamburger-icon"
+              src="./images/icon-hamburger.svg"
+              alt="hamburger-icon"
+            />
+            <img
+              class="close close-icon"
+              src="./images/icon-close.svg"
+              alt="close-icon"
+            />
+          </button>
+
+          <ul id="mobile-menu">
             <li><a href="#">How we work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Account</a></li>
             <li><a class="btn btn-reverse" href="#">View plans</a></li>
           </ul>
+          <img
+            class="img-nav-mobile"
+            src="./images/bg-pattern-mobile-nav.svg"
+            alt="pattern-img"
+          />
         </div>
       </div>
     </nav>
@@ -175,9 +194,5 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Stephen Moran</a>.
-  </div> -->
   </body>
 </html>
