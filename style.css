@@ -133,6 +133,16 @@ nav ul li a {
   color: var(--dark-grayish-violet);
 }
 
+nav ul li a:hover {
+  color: var(--dark-violet);
+}
+
+.btn-hover:hover {
+  background: var(--dark-violet);
+  color: var(--very-light-gray);
+  border-color: var(--dark-violet);
+}
+
 nav li {
   margin-left: 30px;
 }
